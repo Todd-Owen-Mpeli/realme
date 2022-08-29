@@ -126,7 +126,18 @@
 
 // <========== FOOTER ==========>
 .footer {
-	background-color: $baseBlack;
+	a {
+		font-family: $fontStyle_body;
+
+		&:hover {
+			color: $secondary_orange;
+		}
+	}
+
+	.borderLineMid {
+		margin: 1rem 0;
+		border-bottom: $bgLightBlack 0.1rem solid;
+	}
 
 	.content {
 		margin: 0 auto;
@@ -152,7 +163,6 @@
 						padding: 10px;
 						text-decoration: none;
 						font-size: $fontSize_small;
-						color: $baseLightGrey4;
 						font-family: $fontStyle_header;
 					}
 
@@ -163,7 +173,6 @@
 					.titleSection {
 						margin-bottom: 0.25rem;
 						letter-spacing: 0.04rem;
-						color: $baseWhite;
 						text-transform: uppercase;
 						font-size: $fontSize_normal;
 						font-family: $fontStyle_header;
@@ -178,7 +187,6 @@
 						padding: 10px;
 						letter-spacing: 0.04rem;
 						text-decoration: none;
-						color: $baseWhite;
 						text-transform: uppercase;
 						font-size: $fontSize_normal;
 						font-family: $fontStyle_header;
@@ -199,7 +207,6 @@
 					padding: 10px;
 					text-decoration: none;
 					font-size: $fontSize_normal;
-					color: $baseLightGrey4;
 					font-family: $fontStyle_header;
 				}
 
@@ -209,12 +216,7 @@
 			}
 		}
 
-		.borderLineMid {
-			margin: 1rem 0;
-			border-bottom: $bgLightBlack 0.1rem solid;
-		}
-
-		.bottomSection {
+		.contentBottom {
 			.topHalfSection {
 				display: flex;
 				justify-content: right;
@@ -256,12 +258,6 @@
 						i {
 							margin-right: 1rem;
 						}
-					}
-				}
-
-				.rightSide {
-					a:hover {
-						color: $baseWhite;
 					}
 				}
 			}

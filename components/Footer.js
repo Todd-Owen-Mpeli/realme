@@ -6,7 +6,7 @@ const Footer = () => {
 		<>
 			{/* <!--===== FOOTER =====--> */}
 			<footer className={styles.footer}>
-				<div className="content p-12 flex flex-col justify-between text-white">
+				<div className="content p-12 flex flex-col justify-between text-pureBlack">
 					<div className="contentTop flex justify-between">
 						<div class="recommended flex flex-col">
 							<h2>
@@ -204,11 +204,13 @@ const Footer = () => {
 							</div>
 						</div>
 					</div>
+					<div class={styles.borderlineMid}></div>
+
 					<div className="contentBottom flex">
 						<div class="top">
 							<h2>United Kingdom (English / GBP)</h2>
 						</div>
-						<div class="borderlineMid"></div>
+						<div class={styles.borderlineMid}></div>
 						<div class="bottom">
 							<h2>
 								<i class="far fa-copyright"></i>2021 realme. All Rights
