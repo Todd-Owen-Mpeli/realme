@@ -1,0 +1,278 @@
+// Imports
+@import "./fonts";
+@import "./colors";
+@import "./pages/_BrandPage";
+@import "./pages/_newPage";
+@import "./pages/_storePage";
+@import "./pages/_OneTime";
+@import "./components/_NavbarDark";
+@import "./components/_FooterDark";
+@import "./components/_FooterLight";
+@import "./boxShadow";
+
+.container {
+	padding: 0;
+}
+
+//  <========== HEADER ==========>
+.header {
+	padding: 0.5rem 0;
+
+	nav {
+		padding: 0 1rem;
+		align-items: center;
+
+		.topSection {
+			display: flex;
+			justify-content: space-between;
+
+			.leftSide,
+			.rightSide {
+				display: flex;
+
+				.borderDiv {
+					margin: auto 0.15rem;
+					height: 1.25rem;
+					border-right: $baseLightGrey2 0.1rem solid;
+				}
+
+				a {
+					padding: 10px;
+					text-decoration: none;
+					font-size: $fontSize_xSmall;
+					color: $baseLightGrey3;
+					font-family: $fontStyle_option1;
+				}
+
+				a:hover {
+					color: $baseBlack;
+				}
+			}
+		}
+
+		.bottomSection {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.navTitle {
+				a,
+				h2 {
+					margin: 0 auto;
+					color: $baseBlack;
+					font-size: $fontSize_large;
+					font-family: $fontStyle_header;
+				}
+
+				a:hover,
+				h2:hover {
+					color: $secondary_Yellow;
+				}
+			}
+
+			.navLinks {
+				padding: 0rem;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+
+				li {
+					list-style: none;
+
+					a {
+						padding: 0px 10px;
+						margin: 0 auto;
+						text-decoration: none;
+						color: $baseBlack;
+						font-size: $fontSize_large;
+						font-family: $fontStyle_header;
+					}
+
+					a:hover {
+						color: $baseLightGrey3;
+					}
+				}
+
+				a {
+					padding: 0px 10px;
+					margin: 0 auto;
+					text-decoration: none;
+					color: $baseBlack;
+					font-size: $fontSize_small;
+					font-family: $fontStyle_option1;
+				}
+
+				a:hover {
+					color: $baseLightGrey3;
+				}
+
+				.OneTime {
+					color: $secondary_Yellow;
+				}
+			}
+
+			.navCheckout {
+				a {
+					padding: 10px;
+					color: $baseBlack;
+					font-size: $fontSize_normal;
+					font-family: $fontStyle_header;
+				}
+
+				a:hover {
+					color: $baseLightGrey3;
+				}
+			}
+		}
+	}
+
+	.borderLineMid {
+		margin: 0.1rem 0;
+		border-bottom: $baseLightGrey2 0.1rem solid;
+	}
+}
+
+// <========== FOOTER ==========>
+.footer {
+	background-color: $baseBlack;
+
+	.content {
+		margin: 0 auto;
+		max-width: 1800px;
+
+		.topSection {
+			display: flex;
+			justify-content: space-between;
+
+			.leftSection {
+				display: flex;
+				justify-content: space-between;
+
+				.additionalInformation,
+				.getHelp,
+				.aboutToddBlue {
+					display: flex;
+					margin-right: 2rem;
+					line-height: 0.75rem;
+					flex-direction: column;
+
+					a {
+						padding: 10px;
+						text-decoration: none;
+						font-size: $fontSize_small;
+						color: $baseLightGrey4;
+						font-family: $fontStyle_option1;
+					}
+
+					a:hover {
+						color: $baseWhite;
+					}
+
+					.titleSection {
+						margin-bottom: 0.25rem;
+						letter-spacing: 0.04rem;
+						color: $baseWhite;
+						text-transform: uppercase;
+						font-size: $fontSize_normal;
+						font-family: $fontStyle_header;
+					}
+				}
+
+				.additionalInformation {
+					line-height: 1rem;
+					margin-right: 7rem;
+
+					a {
+						padding: 10px;
+						letter-spacing: 0.04rem;
+						text-decoration: none;
+						color: $baseWhite;
+						text-transform: uppercase;
+						font-size: $fontSize_normal;
+						font-family: $fontStyle_header;
+					}
+
+					a:hover {
+						color: $baseLightGrey2;
+					}
+				}
+			}
+
+			.rightSection {
+				display: flex;
+				align-items: flex-start;
+				justify-content: right;
+
+				a {
+					padding: 10px;
+					text-decoration: none;
+					font-size: $fontSize_normal;
+					color: $baseLightGrey4;
+					font-family: $fontStyle_option1;
+				}
+
+				a:hover {
+					color: $baseWhite;
+				}
+			}
+		}
+
+		.borderLineMid {
+			margin: 1rem 0;
+			border-bottom: $bgLightBlack 0.1rem solid;
+		}
+
+		.bottomSection {
+			.topHalfSection {
+				display: flex;
+				justify-content: right;
+
+				a {
+					padding: 10px;
+					text-decoration: none;
+					font-size: $fontSize_xSmall;
+					color: $baseLightGrey4;
+					font-family: $fontStyle_option1;
+				}
+
+				a:hover {
+					color: $baseWhite;
+				}
+			}
+
+			.bottomHalfSection {
+				display: flex;
+				justify-content: space-between;
+
+				.leftSide,
+				.rightSide {
+					display: flex;
+
+					a {
+						padding: 10px;
+						text-decoration: none;
+						font-size: $fontSize_xSmall;
+						color: $baseLightGrey4;
+						font-family: $fontStyle_option1;
+					}
+				}
+
+				.leftSide {
+					.location {
+						color: $baseWhite;
+
+						i {
+							margin-right: 1rem;
+						}
+					}
+				}
+
+				.rightSide {
+					a:hover {
+						color: $baseWhite;
+					}
+				}
+			}
+		}
+	}
+}
