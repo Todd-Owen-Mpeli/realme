@@ -1,14 +1,6 @@
 // Imports
 @import "./fonts";
 @import "./colors";
-@import "./pages/_BrandPage";
-@import "./pages/_newPage";
-@import "./pages/_storePage";
-@import "./pages/_OneTime";
-@import "./components/_NavbarDark";
-@import "./components/_FooterDark";
-@import "./components/_FooterLight";
-@import "./boxShadow";
 
 .container {
 	padding: 0;
@@ -41,7 +33,7 @@
 					text-decoration: none;
 					font-size: $fontSize_xSmall;
 					color: $baseLightGrey3;
-					font-family: $fontStyle_option1;
+					font-family: $fontStyle_header;
 				}
 
 				a:hover {
@@ -99,7 +91,7 @@
 					text-decoration: none;
 					color: $baseBlack;
 					font-size: $fontSize_small;
-					font-family: $fontStyle_option1;
+					font-family: $fontStyle_header;
 				}
 
 				a:hover {
@@ -161,7 +153,7 @@
 						text-decoration: none;
 						font-size: $fontSize_small;
 						color: $baseLightGrey4;
-						font-family: $fontStyle_option1;
+						font-family: $fontStyle_header;
 					}
 
 					a:hover {
@@ -208,7 +200,7 @@
 					text-decoration: none;
 					font-size: $fontSize_normal;
 					color: $baseLightGrey4;
-					font-family: $fontStyle_option1;
+					font-family: $fontStyle_header;
 				}
 
 				a:hover {
@@ -232,7 +224,7 @@
 					text-decoration: none;
 					font-size: $fontSize_xSmall;
 					color: $baseLightGrey4;
-					font-family: $fontStyle_option1;
+					font-family: $fontStyle_header;
 				}
 
 				a:hover {
@@ -253,7 +245,7 @@
 						text-decoration: none;
 						font-size: $fontSize_xSmall;
 						color: $baseLightGrey4;
-						font-family: $fontStyle_option1;
+						font-family: $fontStyle_header;
 					}
 				}
 
