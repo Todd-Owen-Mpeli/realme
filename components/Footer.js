@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "/styles/Home.module.scss";
-import footerLinks from "../lib/footerLinks";
+import {aboutRealMe, support, recommended} from "../lib/footerLinks";
 import FooterLink from "./FooterLink";
 
 const Footer = () => {
@@ -15,84 +15,9 @@ const Footer = () => {
 								<strong>Recommended</strong>
 							</h2>
 							<ul class="links flex flex-col">
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/pl/realme-8-5g"
-										target="blank"
-									>
-										realme 8 5G
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/pl/realme-8" target="blank">
-										realme 8
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/realme-8-pro"
-										target="blank"
-									>
-										realme 8 Pro
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/uk/realme-c21" target="blank">
-										realme C21
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/realme-7-pro"
-										target="blank"
-									>
-										realme 7 Pro
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/uk/realme-7" target="blank">
-										realme 7
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/uk/realme-x50" target="blank">
-										realme X50
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/realme-x3-superzoom"
-										target="blank"
-									>
-										realme X3 SuperZoom
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/realme-x50-pro"
-										target="blank"
-									>
-										realme X50 Pro
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/uk/realme-6" target="blank">
-										realme 6
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/uk/realme-6i" target="blank">
-										realme 6i
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/realme-phones#phones"
-										target="blank"
-									>
-										More Phones +
-									</a>
-								</Link>
+								{recommended.map((keys) => (
+									<FooterLink key={keys.id} name={keys.name} link={keys.link} />
+								))}
 							</ul>
 						</div>
 						<div class="support flex flex-col">
@@ -100,51 +25,9 @@ const Footer = () => {
 								<strong>Support</strong>
 							</h2>
 							<ul class="links flex flex-col">
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/support/faq"
-										target="blank"
-									>
-										FAQ
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/support#user-guid"
-										target="blank"
-									>
-										User Guide
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/legal/declaration"
-										target="blank"
-									>
-										Declaration
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/legal/official-sales-region"
-										target="blank"
-									>
-										Official Sales Region
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a
-										href="https://www.realme.com/uk/support/user-manuals"
-										target="blank"
-									>
-										User Manual
-									</a>
-								</Link>
-								<Link href="#" target="blank">
-									<a href="" target="blank">
-										Manage Cookies
-									</a>
-								</Link>
+								{support.map((keys) => (
+									<FooterLink key={keys.id} name={keys.name} link={keys.link} />
+								))}
 							</ul>
 						</div>
 						<div class="aboutRealme flex flex-col">
@@ -152,7 +35,7 @@ const Footer = () => {
 								<strong>About realme</strong>
 							</h2>
 							<ul class="links flex flex-col">
-								{footerLinks.map((keys) => (
+								{aboutRealMe.map((keys) => (
 									<FooterLink key={keys.id} name={keys.name} link={keys.link} />
 								))}
 							</ul>
@@ -163,14 +46,10 @@ const Footer = () => {
 							</h2>
 							<ul class="links flex flex-col">
 								<Link href="#" target="blank">
-									<a href="" target="blank">
-										service.eu@realme.com
-									</a>
+									<a>service.eu@realme.com</a>
 								</Link>
 								<Link href="#" target="blank">
-									<a href="" target="blank">
-										orders.eu@realme.com
-									</a>
+									<a>orders.eu@realme.com</a>
 								</Link>
 							</ul>
 						</div>
