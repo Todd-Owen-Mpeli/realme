@@ -28,7 +28,7 @@ const Footer = () => {
 								</ul>
 							</div>
 							<div className="support flex flex-col">
-								<h2 className="pt-8 pb-1 lg:pb-6">
+								<h2 className="pt-8 pb-1 lg:pt-0 lg:pb-6">
 									<strong>Support</strong>
 								</h2>
 								<ul className="links flex flex-col">
@@ -44,7 +44,7 @@ const Footer = () => {
 								</ul>
 							</div>
 							<div className="aboutRealme flex flex-col">
-								<h2 className="pt-8 pb-1 lg:pb-6">
+								<h2 className="pt-8 pb-1 lg:pt-0 lg:pb-6">
 									<strong>About realme</strong>
 								</h2>
 								<ul className="links flex flex-col">
@@ -60,7 +60,7 @@ const Footer = () => {
 								</ul>
 							</div>
 							<div className="contactRealme flex flex-col">
-								<h2 className="pt-8 pb-1 lg:pb-6">
+								<h2 className="pt-8 pb-1 lg:pt-0 lg:pb-6">
 									<strong>Contact realme</strong>
 								</h2>
 								<ul className="links flex flex-col">
