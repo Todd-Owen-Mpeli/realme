@@ -127,6 +127,7 @@
 // <========== FOOTER ==========>
 .footer {
 	a {
+		font-size: $fontSize_small;
 		font-family: $fontStyle_body;
 
 		&:hover {
@@ -134,13 +135,30 @@
 		}
 	}
 
+	h2 {
+		// font-weight: 100;
+		font-size: large;
+		font-size: $fontSize_small;
+		font-family: $fontStyle_body;
+	}
+
 	ul {
 		a {
 			padding: 0.2rem 0;
+			font-size: $fontSize_small;
 		}
 	}
 
-	.chatSupportInfo {
-		color: $baseLightGrey2 !important;
+	.contentBottom {
+		h4,
+		a {
+			font-size: $fontSize_small;
+		}
+	}
+
+	.borderlineMid {
+		margin: 0.75rem 0;
+		padding: 0.5px;
+		background-color: $baseLightGrey2;
 	}
 }
