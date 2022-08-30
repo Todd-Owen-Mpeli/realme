@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "/styles/Home.module.scss";
+import footerLinks from "../lib/footerLinks";
+import FooterLink from "./FooterLink";
 
 const Footer = () => {
 	return (
@@ -7,9 +9,9 @@ const Footer = () => {
 			{/* <!--===== FOOTER =====--> */}
 			<footer className={styles.footer}>
 				<div className="content p-12 flex flex-col justify-between text-pureBlack">
-					<div className="contentTop flex justify-between">
+					<div className="contentTop px-10 flex justify-between">
 						<div class="recommended flex flex-col">
-							<h2>
+							<h2 className="pb-6">
 								<strong>Recommended</strong>
 							</h2>
 							<ul class="links flex flex-col">
@@ -94,7 +96,7 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div class="support flex flex-col">
-							<h2>
+							<h2 className="pb-6">
 								<strong>Support</strong>
 							</h2>
 							<ul class="links flex flex-col">
@@ -146,19 +148,17 @@ const Footer = () => {
 							</ul>
 						</div>
 						<div class="aboutRealme flex flex-col">
-							<h2>
+							<h2 className="pb-6">
 								<strong>About realme</strong>
 							</h2>
 							<ul class="links flex flex-col">
-								<Link href="#" target="blank">
-									<a href="https://www.realme.com/uk/brand" target="blank">
-										Our Brand
-									</a>
-								</Link>
+								{footerLinks.map((keys) => (
+									<FooterLink key={keys.id} name={keys.name} link={keys.link} />
+								))}
 							</ul>
 						</div>
 						<div class="contactRealme flex flex-col">
-							<h2>
+							<h2 className="pb-6">
 								<strong>Contact realme</strong>
 							</h2>
 							<ul class="links flex flex-col">
@@ -174,18 +174,16 @@ const Footer = () => {
 								</Link>
 							</ul>
 						</div>
-						<div class="socialLinks flex flex-col">
-							<button>
+						<div class="socialLinks flex flex-col items-center">
+							<button className="mb-6 p-2 flex flex-col justify-between items-center border-[1px] border-solid border-black">
 								<a href="" target="blank">
 									<i class="bi bi-headset"></i>
 									<strong>CHAT SUPPORT</strong>
 								</a>
 							</button>
-							<h2>
+							<h2 className="chatSupportInfo text-center leading-6">
 								English Service: <br />
-								<br />
 								10:00-19:00, Mon-Fri <br />
-								<br />
 								Including Holidays
 							</h2>
 							<div class="socialLinks flex flex-col">
