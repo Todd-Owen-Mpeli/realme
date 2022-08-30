@@ -127,7 +127,7 @@
 // <========== FOOTER ==========>
 .footer {
 	a {
-		font-size: $fontSize_small;
+		font-size: $fontSize_xSmall;
 		font-family: $fontStyle_body;
 
 		&:hover {
@@ -138,21 +138,23 @@
 	h2 {
 		// font-weight: 100;
 		font-size: large;
-		font-size: $fontSize_small;
+		font-size: $fontSize_xSmall;
 		font-family: $fontStyle_body;
 	}
 
 	ul {
-		a {
-			padding: 0.2rem 0;
-			font-size: $fontSize_small;
+		li {
+			a {
+				padding: 0.2rem 0;
+				font-size: $fontSize_xSmall;
+			}
 		}
 	}
 
 	.contentBottom {
 		h4,
 		a {
-			font-size: $fontSize_small;
+			font-size: $fontSize_xSmall;
 		}
 	}
 
