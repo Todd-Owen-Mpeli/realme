@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styles from "/styles/Home.module.scss";
+import socialMedia from "../lib/socialMedia";
 import {aboutRealMe, support, recommended} from "../lib/footerLinks";
 import FooterLink from "./FooterLink";
+import SocialMediaLinks from "./SocialMediaLinks";
 
 const Footer = () => {
 	return (
@@ -84,19 +86,14 @@ const Footer = () => {
 									10:00-19:00, Mon-Fri <br />
 									Including Holidays
 								</h2>
-								<div className="socialLinks flex flex-col">
-									<a href="" target="blank">
-										<i className="bi bi-facebook"></i>
-									</a>
-									<a href="" target="blank">
-										<i className="bi bi-twitter"></i>
-									</a>
-									<a href="" target="blank">
-										<i className="bi bi-youtube"></i>
-									</a>
-									<a href="" target="blank">
-										<i className="bi bi-instagram"></i>
-									</a>
+								<div className="socialLinks mt-5 flex gap-4">
+									{socialMedia.map((keys) => (
+										<Link href="#">
+											<a href={keys.link}>
+												<SocialMediaLinks key={keys.id} svg={keys.svg} />
+											</a>
+										</Link>
+									))}
 								</div>
 							</div>
 						</div>
