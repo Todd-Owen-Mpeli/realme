@@ -1,11 +1,19 @@
 import Head from "next/head";
 
+import ImageBanner from "../components/imagebanner";
+
+const imagesProps = [
+	{
+		backgroundImage: "/images/otherImages/2560-9addad5b18.jpg",
+	},
+];
+
 export default function Home() {
 	return (
-		<div className="container">
+		<>
 			<Head>
-				<title>Create Next App</title>
-				<link rel="icon" href="/favicon.ico" />
+				<title>realme | United Kingdom</title>
+				<link rel="icon" href="/images/Realme-Logo.jpg" />
 			</Head>
 
 			<main>
@@ -52,15 +60,7 @@ export default function Home() {
 				</div>
 			</main>
 
-			<footer>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by <img src="/vercel.svg" alt="Vercel" className="logo" />
-				</a>
-			</footer>
+			<ImageBanner data={imagesProps} />
 
 			<style jsx>{`
 				.container {
@@ -79,30 +79,6 @@ export default function Home() {
 					flex-direction: column;
 					justify-content: center;
 					align-items: center;
-				}
-
-				footer {
-					width: 100%;
-					height: 100px;
-					border-top: 1px solid #eaeaea;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-
-				footer img {
-					margin-left: 0.5rem;
-				}
-
-				footer a {
-					display: flex;
-					justify-content: center;
-					align-items: center;
-				}
-
-				a {
-					color: inherit;
-					text-decoration: none;
 				}
 
 				.title a {
@@ -207,6 +183,6 @@ export default function Home() {
 					box-sizing: border-box;
 				}
 			`}</style>
-		</div>
+		</>
 	);
 }
