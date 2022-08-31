@@ -12,7 +12,36 @@ const Footer = () => {
 			<footer className={styles.footer}>
 				<div className="container mx-auto">
 					<div className="content p-8 pb-2 lg:p-12 flex flex-col justify-between text-pureBlack">
-						<div className="contentTop flex flex-col lg:flex-row justify-between">
+						<div className="flex mb-12 p-2 gap-16 justify-around">
+							<div class="flex flex-col justify-center items-center">
+								<img
+									src="/images/shipping-box.png"
+									className="mb-2"
+									width="80px"
+									height="80px"
+								/>
+								<h2>Free shipping over £60</h2>
+							</div>
+							<div class="flex flex-col justify-center items-center">
+								<img
+									src="/images/apply-pay.png"
+									className="mb-2"
+									width="80px"
+									height="80px"
+								/>
+								<h2>Secure Payment</h2>
+							</div>
+							<div class="flex flex-col justify-center items-center">
+								<img
+									src="/images/ups.jpg"
+									className="mb-2"
+									width="100px"
+									height="100px"
+								/>
+								<h2>14-days easy return</h2>
+							</div>
+						</div>
+						<div className="flex flex-col lg:flex-row justify-between">
 							<div className="recommended flex flex-col">
 								<h2 className="pt-0 pb-1 lg:pb-6">
 									<strong>Recommended</strong>

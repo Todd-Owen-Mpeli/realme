@@ -129,6 +129,18 @@
 	a {
 		font-size: $fontSize_xSmall;
 		font-family: $fontStyle_body;
+
+		&:hover {
+			color: $secondary_orange;
+		}
+	}
+
+	button {
+		a {
+			&:hover {
+				color: $baseBlack;
+			}
+		}
 	}
 
 	h2 {
