@@ -6,7 +6,7 @@ const ImageBanner = (props) => {
 		backgroundImage: `url('${props.data.backgroundImage}')`,
 		backgroundPosition: "center",
 		backgroundRepeat: "no-repeat",
-		backgroundSize: "contain",
+		backgroundSize: "cover",
 	};
 
 	const buttonText = "Learn More";
