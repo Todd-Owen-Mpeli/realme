@@ -75,9 +75,14 @@ const Footer = () => {
 								</ul>
 							</div>
 							<div className="socialLinks mt-12 lg:mt-0 flex flex-col items-center">
-								<button className="mb-6 p-2 flex flex-col justify-between items-center border-[1px] border-solid border-black">
-									<a href="" target="blank">
-										<i className="bi bi-headset"></i>
+								<button className="mb-6 py-3 px-6 flex flex-col justify-between items-center rounded-[50px] border-[1px] border-solid border-black hover:bg-orange hover:border-orange">
+									<a href="" target="blank" className="flex">
+										<img
+											src="/svg/headset.svg"
+											className="mr-2"
+											width="20px"
+											height="20px"
+										/>
 										<strong>CHAT SUPPORT</strong>
 									</a>
 								</button>
