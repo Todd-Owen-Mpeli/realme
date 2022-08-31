@@ -126,6 +126,10 @@
 
 // <========== FOOTER ==========>
 .footer {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
 	a {
 		font-size: $fontSize_xSmall;
 		font-family: $fontStyle_body;
