@@ -20,10 +20,10 @@ const ImageBanner = (props) => {
 			>
 				<div className={styles.ImageBanner}>
 					<div className="flex flex-col text-white justify-center items-center">
-						<h2 className=" text-4xl">
+						<h2 className="text-4xl">
 							<strong>Dare to leap</strong>
 						</h2>
-						<button className="py-2 px-10 mt-10 border-[1px] border-solid border-white hover:bg-white hover:text-black">
+						<button className="flex flex-col justify-center items-center py-2 px-10 mt-10 mx-auto border-[1px] border-solid border-white hover:bg-white hover:text-black">
 							<Link href={buttonLink} target="blank">
 								<a>{buttonText}</a>
 							</Link>

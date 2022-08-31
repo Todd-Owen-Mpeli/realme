@@ -1,0 +1,15 @@
+.ImageBanner {
+	h2,
+	a {
+		color: $baseWhite;
+		font-family: $fontStyle_body;
+	}
+
+	button {
+		&:hover {
+			a {
+				color: $baseBlack;
+			}
+		}
+	}
+}
