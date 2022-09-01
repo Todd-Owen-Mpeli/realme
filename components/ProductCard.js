@@ -1,37 +1,31 @@
 import Link from "next/link";
-import Image from "next/image";
-import {motion} from "framer-motion";
 import styles from "/styles/Home.module.scss";
 
 const ProductCard = (props) => {
-	const image = `/productImages/${props.image}`;
 	return (
-		<div>
-			<Link href="/store">
-				<a target="blank">
-					<Image
-						src={image}
-						alt={props.productName}
-						width={400}
-						height={400}
-						layout="responsive"
-						objectFit="cover"
-					/>
-				</a>
-			</Link>
-			<div className={styles.description}>
-				<div className={styles.topSection}>
-					<Link href="/store">
-						<a target="blank">{props.productName}</a>
-					</Link>
-
-					<h2 className={styles.price}>£{props.pricing}</h2>
+		<>
+			<div className={styles.productCard}>
+				<div className="p-6 h-full flex flex-col bg-white justify-between items-center">
+					<div className="h-1/2 mb-4">
+						<Link href={props.link}>
+							<a target="blank">
+								<img
+									src={props.image}
+									alt={props.title}
+									width="100%"
+									height="100px"
+								/>
+							</a>
+						</Link>
+					</div>
+					<div className="h-1/2 flex flex-col text-center">
+						<h2 className="font-semibold">{props.title}</h2>
+						<h3 className="mt-2">{props.subtitle}</h3>
+						<h4 className="text-pinkRed mt-4 font-semibold">£{props.price}</h4>
+					</div>
 				</div>
-				<Link href="/store">
-					<a className={styles.productCategory}>{props.productCategory}</a>
-				</Link>
 			</div>
-		</div>
+		</>
 	);
 };
 
