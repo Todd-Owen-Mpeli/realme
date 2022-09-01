@@ -1,7 +1,10 @@
 // Imports
 @import "./fonts";
 @import "./colors";
+
+// Components
 @import "./components/ImageBanner.scss";
+@import "./components/twoImageDisplay.scss";
 
 .container {
 	padding: 0;
