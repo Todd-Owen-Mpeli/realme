@@ -32,18 +32,20 @@ const LinksAndProducts = (props) => {
 						</div>
 					</div>
 					<div className={styles.productSection}>
-						{props.data.map((keys) => (
-							<ProductCardTwo
-								key={keys.id}
-								link={keys.link}
-								price={keys.price}
-								title={keys.title}
-								subtitle={keys.subtitle}
-								newProduct={keys.isNewProduct}
-								productImage={keys.productImage}
-								backgroundImage={keys.backgroundImage}
-							/>
-						))}
+						<div className="grid gap-4 grid-cols-2 grid-row-3">
+							{props.data.map((keys) => (
+								<ProductCardTwo
+									key={keys.id}
+									link={keys.link}
+									price={keys.price}
+									title={keys.title}
+									subtitle={keys.subtitle}
+									newProduct={keys.isNewProduct}
+									productImage={keys.productImage}
+									backgroundImage={keys.backgroundImage}
+								/>
+							))}
+						</div>
 					</div>
 				</div>
 			</div>
