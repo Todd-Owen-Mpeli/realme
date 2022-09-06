@@ -10,9 +10,9 @@ const LinksAndProducts = (props) => {
 	return (
 		<>
 			<div className={styles.linksAndProducts}>
-				<div className="content">
+				<div className="content p-4 md:p-8">
 					<div className={styles.linksSection}>
-						<div className="flex justify-between items-center">
+						<div className="flex pb-4 justify-between items-center">
 							<div className="flex gap-3 justify-between items-center">
 								<h3 className="capitalize font-semibold mr-6">Accessories</h3>
 								<Link href={pageLinksOne}>
@@ -36,7 +36,7 @@ const LinksAndProducts = (props) => {
 						</div>
 					</div>
 					<div className={styles.productSection}>
-						<div className="grid gap-4 grid-cols-2 grid-row-3">
+						<div className="grid gap-4 grid-cols-1 grid-row-1 md:grid-cols-2 md:grid-row-2">
 							{props.data.map((keys) => (
 								<ProductCardTwo
 									key={keys.id}
