@@ -3,29 +3,33 @@ import ProductCardTwo from "./ProductCardTwo";
 import styles from "/styles/Home.module.scss";
 
 const LinksAndProducts = (props) => {
+	const pageLinksOne = "www.realme.co.uk"; // propss.data.pageLinksOne;
+	const pageLinksTwo = "www.realme.co.uk"; // propss.data.pageLinksTwo;
+	const viewMoreLinks = "www.realme.co.uk"; // propss.data.viewMoreLinks;
+
 	return (
 		<>
 			<div className={styles.linksAndProducts}>
 				<div className="content">
 					<div className={styles.linksSection}>
 						<div className="flex justify-between items-center">
-							<div className="flex justify-between">
-								<h3 className="capitalize">Accessories</h3>
-								<Link href={props.pageLinksOne}>
-									<a target="blank" className="flex">
+							<div className="flex gap-3 justify-between items-center">
+								<h3 className="capitalize font-semibold mr-6">Accessories</h3>
+								<Link href={pageLinksOne}>
+									<a target="blank" className="flex hover:text-yellow">
 										Smart Life
 									</a>
 								</Link>
-								<Link href={props.pageLinksTwo}>
-									<a target="blank" className="flex">
+								<Link href={pageLinksTwo}>
+									<a target="blank" className="flex hover:text-yellow">
 										Other
 									</a>
 								</Link>
 							</div>
 							<div>
-								<Link href={props.viewMoreLinks}>
-									<a target="blank" className="flex">
-										View More <span>Image Icon</span>
+								<Link href={viewMoreLinks}>
+									<a target="blank" className="flex hover:text-yellow">
+										View More <span className="ml-2">Image Icon</span>
 									</a>
 								</Link>
 							</div>

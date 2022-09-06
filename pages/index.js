@@ -1,9 +1,9 @@
 import Head from "next/head";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
-import ImageBanner from "../components/imagebanner";
-import ProductCard from "../components/productCard";
+import ImageBanner from "../components/ImageBanner";
+import LinksAndProducts from "../components/LinksAndProducts";
 import TwoImageDisplay from "../components/TwoImageDisplay";
-import accessoriesProducts from "../lib/products";
+import {otherProducts, accessoriesProducts} from "../lib/products";
 
 const imagesProps = {
 	backgroundImage: "/images/otherImages/2560-9addad5b18.jpg",
@@ -18,8 +18,8 @@ const activities = {
 };
 
 export default function Home() {
-	const [firstProduct] = accessoriesProducts;
-	console.log(firstProduct);
+	const [firstProduct] = otherProducts;
+	// console.log(firstProduct);
 	return (
 		<>
 			<Head>
@@ -27,8 +27,10 @@ export default function Home() {
 				<link rel="icon" href="/images/Realme-Logo.jpg" />
 			</Head>
 
-			<main>
-				<FourProductDisplayGrid data={accessoriesProducts} />
+			<main className="container mx-auto">
+				<LinksAndProducts data={accessoriesProducts} />
+
+				<FourProductDisplayGrid data={otherProducts} />
 
 				<TwoImageDisplay data={activities} />
 
