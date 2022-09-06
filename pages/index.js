@@ -1,6 +1,7 @@
 import Head from "next/head";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
 import ImageBanner from "../components/imagebanner";
+import ProductCard from "../components/productCard";
 import TwoImageDisplay from "../components/TwoImageDisplay";
 import accessoriesProducts from "../lib/products";
 
@@ -17,6 +18,8 @@ const activities = {
 };
 
 export default function Home() {
+	const [firstProduct] = accessoriesProducts;
+	console.log(firstProduct);
 	return (
 		<>
 			<Head>
