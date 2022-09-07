@@ -1,8 +1,14 @@
-.productCard {
+.productCard,
+.limitTimeProductCard {
 	background-color: $baseWhite;
 	h2,
 	h3,
 	h4 {
 		font-family: $fontStyle_body;
 	}
+}
+
+.limitTimeProductCard {
+	width: 25%;
+	height: 100%;
 }

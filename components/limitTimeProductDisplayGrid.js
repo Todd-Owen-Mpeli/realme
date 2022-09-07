@@ -11,7 +11,7 @@ const LimitTimeProductDisplayGrid = (props) => {
 					<div className={styles.title}>
 						<h3 className="capitalize font-semibold mb-4 text-2xl">{title}</h3>
 					</div>
-					<div className="flex flex-col md:flex-row justify-between items-center gap-8">
+					<div className="flex flex-col md:flex-row justify-between items-center gap-4">
 						{props.data.map((keys) => (
 							<LimitTimeProductCard
 								key={keys.id}
