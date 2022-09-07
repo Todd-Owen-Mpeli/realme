@@ -12,7 +12,7 @@ const LinksAndProducts = (props) => {
 			<div className={styles.linksAndProducts}>
 				<div className="content p-4 md:p-8">
 					<div className={styles.linksSection}>
-						<div className="flex pb-4 justify-between items-center">
+						<div className="flex flex-col sm:flex-row pb-4 justify-between items-start sm:items-center">
 							<div className="flex gap-3 justify-between items-center">
 								<h3 className="capitalize font-semibold mr-6">{title}</h3>
 								<Link href={pageLinksOne.link}>
@@ -32,7 +32,14 @@ const LinksAndProducts = (props) => {
 										target="blank"
 										className="flex text-grey text-sm hover:text-yellow"
 									>
-										View More <span className="ml-2">Image Icon</span>
+										View More{" "}
+										<span className="ml-2 my-auto">
+											<img
+												src="/svg/viewMoreNextArrow.svg"
+												width={14}
+												height={14}
+											></img>
+										</span>
 									</a>
 								</Link>
 							</div>
