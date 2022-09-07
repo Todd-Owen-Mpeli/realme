@@ -1,12 +1,17 @@
 import "../styles/globals.scss";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import React, {useEffect} from "react";
 
 function MyApp({Component, pageProps}) {
 	// Removes Global Navbar & Adds Custom Header and Footer Page layout Function
 	if (Component.getLayout) {
 		return Component.getLayout(<Component {...pageProps} />);
 	}
+
+	useEffect(() => {
+		document.body.style.backgroundColor = "#fafafa";
+	}, []);
 
 	return (
 		<>

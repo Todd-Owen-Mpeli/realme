@@ -10,6 +10,10 @@
 @import "./components/linksAndProducts.scss";
 
 .container {
+	background: #fafafa;
+}
+
+.container {
 	padding: 0;
 }
 
@@ -133,6 +137,7 @@
 
 // <========== FOOTER ==========>
 .footer {
+	background: $baseWhite;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;

@@ -20,7 +20,6 @@ const ProductCardTwo = (props) => {
 
 	/* Displays the "NEW" Product symbol Div 
     iF props.isNewProduct returns true*/
-	console.log(props.isNewProduct);
 	const displayNewSymbol = props.isNewProduct ? "flex" : "hidden";
 
 	return (

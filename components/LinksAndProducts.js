@@ -3,9 +3,9 @@ import ProductCardTwo from "./ProductCardTwo";
 import styles from "/styles/Home.module.scss";
 
 const LinksAndProducts = (props) => {
-	const pageLinksOne = "www.realme.co.uk"; // propss.data.pageLinksOne;
-	const pageLinksTwo = "www.realme.co.uk"; // propss.data.pageLinksTwo;
-	const viewMoreLinks = "www.realme.co.uk"; // propss.data.viewMoreLinks;
+	const [pageLinksOne, pageLinksTwo] = props.links;
+	const viewMoreLinks = props.viewMoreLink;
+	const title = props.title;
 
 	return (
 		<>
@@ -14,21 +14,24 @@ const LinksAndProducts = (props) => {
 					<div className={styles.linksSection}>
 						<div className="flex pb-4 justify-between items-center">
 							<div className="flex gap-3 justify-between items-center">
-								<h3 className="capitalize font-semibold mr-6">Accessories</h3>
-								<Link href={pageLinksOne}>
+								<h3 className="capitalize font-semibold mr-6">{title}</h3>
+								<Link href={pageLinksOne.link}>
 									<a target="blank" className="flex hover:text-yellow">
-										Smart Life
+										{pageLinksOne.title}
 									</a>
 								</Link>
-								<Link href={pageLinksTwo}>
+								<Link href={pageLinksTwo.link}>
 									<a target="blank" className="flex hover:text-yellow">
-										Other
+										{pageLinksTwo.title}
 									</a>
 								</Link>
 							</div>
 							<div>
 								<Link href={viewMoreLinks}>
-									<a target="blank" className="flex hover:text-yellow">
+									<a
+										target="blank"
+										className="flex text-grey text-sm hover:text-yellow"
+									>
 										View More <span className="ml-2">Image Icon</span>
 									</a>
 								</Link>
