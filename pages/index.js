@@ -20,6 +20,7 @@ const activities = {
 export default function Home() {
 	const [firstProduct] = otherProducts;
 	// console.log(firstProduct);
+
 	return (
 		<>
 			<Head>

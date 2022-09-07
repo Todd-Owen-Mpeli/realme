@@ -20,18 +20,19 @@ const ProductCardTwo = (props) => {
 
 	/* Displays the "NEW" Product symbol Div 
     iF props.isNewProduct returns true*/
+	console.log(props.isNewProduct);
 	const displayNewSymbol = props.isNewProduct ? "flex" : "hidden";
 
 	return (
 		<>
 			<div className={styles.productCardTwo} style={{...backgroundImageProps}}>
-				<div className="flex p-6 min-h-[20rem] justify-start items-center">
+				<div className="flex flex-col min-h-[20rem] justify-start items-start">
 					<div className={displayNewSymbol}>
-						<div className="bg-limeGreen p-2 mt-5">
-							<h3 className="uppercase">New</h3>
+						<div className="bg-limeGreen p-1 mt-5">
+							<h3 className="uppercase text-white text-xs">New</h3>
 						</div>
 					</div>
-					<div className="flex w-full justify-center items-center">
+					<div className="flex p-6 w-full justify-center items-center">
 						<div className="w-1/2 h-1/2 flex flex-col text-start justify-center">
 							<h2 className="text-2xl">{props.title}</h2>
 							<h3 className="mt-2">{props.subtitle}</h3>

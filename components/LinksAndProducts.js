@@ -44,7 +44,7 @@ const LinksAndProducts = (props) => {
 									price={keys.price}
 									title={keys.title}
 									subtitle={keys.subtitle}
-									newProduct={keys.isNewProduct}
+									isNewProduct={keys.isNewProduct}
 									productImage={keys.productImage}
 									backgroundImage={keys.backgroundImage}
 								/>
