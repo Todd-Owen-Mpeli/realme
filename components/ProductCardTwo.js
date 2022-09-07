@@ -26,10 +26,12 @@ const ProductCardTwo = (props) => {
 	return (
 		<>
 			<div className={styles.productCardTwo} style={{...backgroundImageProps}}>
-				<div className="flex flex-col min-h-[20rem] justify-start items-start">
+				<div className="relative flex flex-col min-h-[20rem] justify-center items-start">
 					<div className={displayNewSymbol}>
-						<div className="bg-limeGreen p-1 mt-5">
-							<h3 className="uppercase text-white text-xs">New</h3>
+						<div className="absolute top-[25px]">
+							<div className="bg-limeGreen p-1 ">
+								<h3 className="uppercase text-white text-xs">New</h3>
+							</div>
 						</div>
 					</div>
 					<div className="flex p-6 w-full justify-center items-center">
