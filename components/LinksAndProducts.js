@@ -14,7 +14,9 @@ const LinksAndProducts = (props) => {
 					<div className={styles.linksSection}>
 						<div className="flex flex-col sm:flex-row pb-4 justify-between items-start sm:items-center">
 							<div className="flex gap-3 justify-between items-center">
-								<h3 className="capitalize font-semibold mr-6">{title}</h3>
+								<h3 className="capitalize font-semibold mr-6 text-2xl">
+									{title}
+								</h3>
 								<Link href={pageLinksOne.link}>
 									<a target="blank" className="flex hover:text-yellow">
 										{pageLinksOne.title}

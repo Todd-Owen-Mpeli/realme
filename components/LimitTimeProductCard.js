@@ -7,7 +7,7 @@ const LimitTimeProductCard = (props) => {
 			<div className={styles.productCard}>
 				<div className="p-6 h-full flex flex-col bg-white justify-between items-center">
 					<div className="h-1/2 mb-4">
-						<Link href={props.link}>
+						<Link href="#">
 							<a target="blank">
 								<img
 									src={props.image}

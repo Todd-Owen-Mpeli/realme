@@ -1,6 +1,7 @@
 import Head from "next/head";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
 import ImageBanner from "../components/ImageBanner";
+import LimitTimeProductDisplayGrid from "../components/LimitTimeProductDisplayGrid";
 import LinksAndProducts from "../components/LinksAndProducts";
 import TwoImageDisplay from "../components/TwoImageDisplay";
 import {
@@ -56,6 +57,10 @@ export default function Home() {
 			</Head>
 
 			<main className="container mx-auto bg-[#fafafa]">
+				<LimitTimeProductDisplayGrid
+					title="Gone in Flash"
+					data={otherProducts}
+				/>
 				<LinksAndProducts
 					title="SmartPhones"
 					links={smartPhonesProductsLinks}
