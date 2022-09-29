@@ -13,7 +13,8 @@ const LimitTimeProductCard = (props) => {
 									src={props.image}
 									alt={props.title}
 									width="100%"
-									height="100px"
+									height="300px"
+									className="object-cover"
 								/>
 							</a>
 						</Link>
