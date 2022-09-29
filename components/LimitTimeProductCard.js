@@ -5,7 +5,7 @@ const LimitTimeProductCard = (props) => {
 	return (
 		<>
 			<div className={styles.limitTimeProductCard}>
-				<div className="p-6 h-full flex flex-col bg-white justify-between items-center">
+				<div className="p-0 md:p-6 h-full flex flex-col bg-white justify-between items-center">
 					<div className="h-1/2 mb-4">
 						<Link href={props.link}>
 							<a target="blank">
@@ -14,7 +14,7 @@ const LimitTimeProductCard = (props) => {
 									alt={props.title}
 									width="100%"
 									height="300px"
-									className="object-cover"
+									className="object-cover w-full h-[350px] md:h-[300px]"
 								/>
 							</a>
 						</Link>

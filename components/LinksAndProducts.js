@@ -13,7 +13,7 @@ const LinksAndProducts = (props) => {
 				<div className="content p-4 md:p-8">
 					<div className={styles.linksSection}>
 						<div className="flex flex-col sm:flex-row pb-4 justify-between items-start sm:items-center">
-							<div className="flex gap-3 justify-between items-center">
+							<div className="flex flex-col sm:flex-row gap-3 justify-between items-start md:items-center mb-4 md:mb-0">
 								<h3 className="capitalize font-semibold mr-6 text-2xl">
 									{title}
 								</h3>

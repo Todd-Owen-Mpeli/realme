@@ -23,11 +23,6 @@ const Navbar = () => {
 								<Link href="/Help">
 									<a>Help</a>
 								</Link>
-
-								<div className={styles.borderDiv}></div>
-								<Link href="/FAQs">
-									<a>FAQs</a>
-								</Link>
 							</div>
 						</div>
 					</nav>
@@ -47,12 +42,6 @@ const Navbar = () => {
 								</Link>
 								<Link href="/store">
 									<a>Store</a>
-								</Link>
-								<Link href="/Accessories">
-									<a>Accessories</a>
-								</Link>
-								<Link href="/OneTime">
-									<a className={styles.OneTime}>One Time Customs</a>
 								</Link>
 							</ul>
 							<div className={styles.navCheckout}>
