@@ -7,7 +7,7 @@ const LimitTimeProductDisplayGrid = (props) => {
 	return (
 		<>
 			<div className={styles.limitTimeProductDisplayGrid}>
-				<div className="container mx-auto p-4 lg:p-10">
+				<div className="container mx-auto p-4 lg:p-5">
 					<div className={styles.title}>
 						<h3 className="capitalize font-semibold mb-4 text-2xl">{title}</h3>
 					</div>
@@ -20,6 +20,7 @@ const LimitTimeProductDisplayGrid = (props) => {
 								title={keys.title}
 								subtitle={keys.subtitle}
 								price={keys.price}
+								discountPrice={keys.discountPrice}
 							/>
 						))}
 					</div>

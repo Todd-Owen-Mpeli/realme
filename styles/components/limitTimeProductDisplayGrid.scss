@@ -1,5 +1,3 @@
-$small: 640px;
-
 .limitTimeProductDisplayGrid {
 	h3 {
 		font-family: $fontStyle_body;
@@ -8,7 +6,4 @@ $small: 640px;
 
 .limitTimeProductCard {
 	width: 100%;
-}
-
-@media screen and (max-width: $small) {
 }
