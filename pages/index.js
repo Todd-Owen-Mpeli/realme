@@ -6,6 +6,7 @@ import LimitTimeProductDisplayGrid from "../components/LimitTimeProductDisplayGr
 import LinksAndProducts from "../components/LinksAndProducts";
 import TwoImageDisplay from "../components/TwoImageDisplay";
 import {
+	heroSection,
 	otherProducts,
 	accessoriesProducts,
 	smartPhonesProducts,
@@ -60,13 +61,14 @@ export default function Home() {
 
 			<main className="container mx-auto bg-[#fafafa]">
 				{/* Hero Section */}
-				<Hero data={limitTimeProducts}></Hero>
+				<Hero data={heroSection}></Hero>
 
 				{/*Time Limit */}
 				<LimitTimeProductDisplayGrid
 					title="Gone in Flash"
 					data={limitTimeProducts}
 				/>
+				{/* Smartphones Section */}
 				<LinksAndProducts
 					title="SmartPhones"
 					links={smartPhonesProductsLinks}
@@ -74,6 +76,7 @@ export default function Home() {
 					viewMoreLink="www.realme.co.uk"
 				/>
 
+				{/* Accessories */}
 				<LinksAndProducts
 					title="Accessories"
 					links={accessoriesProductsLinks}
@@ -81,10 +84,13 @@ export default function Home() {
 					viewMoreLink="www.realme.co.uk"
 				/>
 
+				{/* Other Products Display */}
 				<FourProductDisplayGrid data={otherProducts} />
 
+				{/* Activities */}
 				<TwoImageDisplay data={activities} />
 
+				{/* Image Banner */}
 				<ImageBanner data={imagesProps} />
 			</main>
 		</>
