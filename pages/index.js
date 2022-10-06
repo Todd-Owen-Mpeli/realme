@@ -1,5 +1,6 @@
 import Head from "next/head";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
+import Hero from "../components/hero";
 import ImageBanner from "../components/ImageBanner";
 import LimitTimeProductDisplayGrid from "../components/LimitTimeProductDisplayGrid";
 import LinksAndProducts from "../components/LinksAndProducts";
@@ -58,6 +59,10 @@ export default function Home() {
 			</Head>
 
 			<main className="container mx-auto bg-[#fafafa]">
+				{/* Hero Section */}
+				<Hero data={limitTimeProducts}></Hero>
+
+				{/*Time Limit */}
 				<LimitTimeProductDisplayGrid
 					title="Gone in Flash"
 					data={limitTimeProducts}
