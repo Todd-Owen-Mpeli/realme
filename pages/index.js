@@ -64,9 +64,11 @@ export default function Home({posts}) {
 
 			<main className="container mx-auto bg-[#fafafa]">
 				{posts.map(({node}) => {
+					console.log(node);
+
 					return (
 						<div>
-							<h3>{node.title}</h3>
+							<h3>{node.themesOptions.title}</h3>
 						</div>
 					);
 				})}

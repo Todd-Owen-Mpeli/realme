@@ -4,7 +4,7 @@ const Hero = (props) => {
 	return (
 		<>
 			<div>
-				<h2>Enter</h2>
+				<h2>Hero Section</h2>
 			</div>
 		</>
 	);
