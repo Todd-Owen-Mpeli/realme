@@ -1,4 +1,5 @@
 import Head from "next/head";
+import {getPostsForHome} from "../lib/api";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
 import Hero from "../components/hero";
 import ImageBanner from "../components/ImageBanner";
@@ -51,7 +52,9 @@ const accessoriesProductsLinks = [
 	},
 ];
 
-export default function Home() {
+export default function Home({posts}) {
+	console.log(posts);
+
 	return (
 		<>
 			<Head>
@@ -60,6 +63,14 @@ export default function Home() {
 			</Head>
 
 			<main className="container mx-auto bg-[#fafafa]">
+				{posts.map(({node}) => {
+					return (
+						<div>
+							<h3>{node.title}</h3>
+						</div>
+					);
+				})}
+
 				{/* Hero Section */}
 				<Hero data={heroSection}></Hero>
 
@@ -95,4 +106,12 @@ export default function Home() {
 			</main>
 		</>
 	);
+}
+
+export async function getStaticProps() {
+	const posts = await getPostsForHome();
+
+	return {
+		props: {posts: posts.edges},
+	};
 }
