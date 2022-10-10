@@ -1,8 +1,6 @@
 import styles from "/styles/Home.module.scss";
 
 const TwoImageDisplay = (props) => {
-	console.log(props);
-
 	const title = props.data.title;
 	const imageOne = `${props.data.imageOne.sourceUrl}`;
 	const imageTwo = `${props.data.imageTwo.sourceUrl}`;

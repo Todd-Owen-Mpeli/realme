@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {getTitleAndTwoImages} from "../lib/api";
+import {getTitleAndTwoImages, getImageBanner} from "../lib/api";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
 import Hero from "../components/hero";
 import ImageBanner from "../components/ImageBanner";
@@ -16,14 +16,6 @@ import {
 
 const imagesProps = {
 	backgroundImage: "/images/otherImages/2560-9addad5b18.jpg",
-};
-
-const activities = {
-	title: "Activities",
-	imageOne: "/images/otherImages/1626084421161.jpg",
-	imageTwo: "/images/otherImages/1603864728292.jpg",
-	pageLinkOne: "www.facebook.com",
-	pageLinkTwo: "www.facebook.com",
 };
 
 const smartPhonesProductsLinks = [
@@ -52,9 +44,8 @@ const accessoriesProductsLinks = [
 	},
 ];
 
-export default function Home({titleAndTwoImagesContent}) {
-	// console.log(titleAndTwoImagesContent);
-
+export default function Home({titleAndTwoImagesContent, imageBanner}) {
+	// console.log(imageBanner);
 	return (
 		<>
 			<Head>
@@ -94,7 +85,7 @@ export default function Home({titleAndTwoImagesContent}) {
 				<TwoImageDisplay data={titleAndTwoImagesContent} />
 
 				{/* Image Banner */}
-				<ImageBanner data={imagesProps} />
+				<ImageBanner data={imageBanner} />
 			</main>
 		</>
 	);
@@ -102,8 +93,12 @@ export default function Home({titleAndTwoImagesContent}) {
 
 export async function getStaticProps() {
 	const titleAndTwoImagesContent = await getTitleAndTwoImages();
+	const imageBanner = await getImageBanner();
 
 	return {
-		props: {titleAndTwoImagesContent: titleAndTwoImagesContent},
+		props: {
+			titleAndTwoImagesContent: titleAndTwoImagesContent,
+			imageBanner: imageBanner,
+		},
 	};
 }
