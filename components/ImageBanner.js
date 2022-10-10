@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "/styles/Home.module.scss";
 
 const ImageBanner = (props) => {
@@ -24,9 +23,9 @@ const ImageBanner = (props) => {
 							<strong>{title}</strong>
 						</h2>
 						<button className="flex flex-col justify-center items-center py-2 px-10 mt-10 mx-auto border-[1px] border-solid border-white hover:bg-white hover:text-black">
-							<Link href={buttonLink} target="blank">
-								<a>{buttonText}</a>
-							</Link>
+							<a href={buttonLink} target="blank">
+								{buttonText}
+							</a>
 						</button>
 					</div>
 				</div>

@@ -83,10 +83,10 @@ export default function Home({titleAndTwoImagesContent, imageBanner}) {
 
 				{/* Activities */}
 				<TwoImageDisplay data={titleAndTwoImagesContent} />
-
-				{/* Image Banner */}
-				<ImageBanner data={imageBanner} />
 			</main>
+
+			{/* Image Banner */}
+			<ImageBanner data={imageBanner} />
 		</>
 	);
 }
