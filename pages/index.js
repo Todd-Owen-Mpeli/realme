@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {getPostsForHome} from "../lib/api";
+import {getTitleAndTwoImages} from "../lib/api";
 import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
 import Hero from "../components/hero";
 import ImageBanner from "../components/ImageBanner";
@@ -52,8 +52,8 @@ const accessoriesProductsLinks = [
 	},
 ];
 
-export default function Home({posts}) {
-	console.log(posts);
+export default function Home({titleAndTwoImagesContent}) {
+	// console.log(titleAndTwoImagesContent);
 
 	return (
 		<>
@@ -63,16 +63,6 @@ export default function Home({posts}) {
 			</Head>
 
 			<main className="container mx-auto bg-[#fafafa]">
-				{posts.map(({node}) => {
-					console.log(node);
-
-					return (
-						<div>
-							<h3>{node.themesOptions.title}</h3>
-						</div>
-					);
-				})}
-
 				{/* Hero Section */}
 				<Hero data={heroSection}></Hero>
 
@@ -101,7 +91,7 @@ export default function Home({posts}) {
 				<FourProductDisplayGrid data={otherProducts} />
 
 				{/* Activities */}
-				<TwoImageDisplay data={activities} />
+				<TwoImageDisplay data={titleAndTwoImagesContent} />
 
 				{/* Image Banner */}
 				<ImageBanner data={imagesProps} />
@@ -111,9 +101,9 @@ export default function Home({posts}) {
 }
 
 export async function getStaticProps() {
-	const posts = await getPostsForHome();
+	const titleAndTwoImagesContent = await getTitleAndTwoImages();
 
 	return {
-		props: {posts: posts.edges},
+		props: {titleAndTwoImagesContent: titleAndTwoImagesContent},
 	};
 }

@@ -1,11 +1,13 @@
 import styles from "/styles/Home.module.scss";
 
 const TwoImageDisplay = (props) => {
+	console.log(props);
+
 	const title = props.data.title;
-	const imageOne = `${props.data.imageOne}`;
-	const imageTwo = `${props.data.imageTwo}`;
-	const pageLinkOne = props.data.pageLinkOne;
-	const pageLinkTwo = props.data.pageLinkTwo;
+	const imageOne = `${props.data.imageOne.sourceUrl}`;
+	const imageTwo = `${props.data.imageTwo.sourceUrl}`;
+	const pageLinkOne = props.data.imageOneLink.url;
+	const pageLinkTwo = props.data.imageTwoLink.url;
 
 	return (
 		<>
