@@ -1,11 +1,14 @@
 import Head from "next/head";
-import {getTitleAndTwoImages, getImageBanner} from "../lib/api";
-import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
+import {gql} from "@apollo/client";
+import {client} from "../lib/apollo";
+
+// Components
 import Hero from "../components/hero";
 import ImageBanner from "../components/ImageBanner";
-import LimitTimeProductDisplayGrid from "../components/LimitTimeProductDisplayGrid";
-import LinksAndProducts from "../components/LinksAndProducts";
 import TwoImageDisplay from "../components/TwoImageDisplay";
+import LinksAndProducts from "../components/LinksAndProducts";
+import FourProductDisplayGrid from "../components/FourProductDisplayGrid";
+import LimitTimeProductDisplayGrid from "../components/LimitTimeProductDisplayGrid";
 import {
 	heroSection,
 	otherProducts,
@@ -13,10 +16,6 @@ import {
 	smartPhonesProducts,
 	limitTimeProducts,
 } from "../lib/products";
-
-const imagesProps = {
-	backgroundImage: "/images/otherImages/2560-9addad5b18.jpg",
-};
 
 const smartPhonesProductsLinks = [
 	{
@@ -44,12 +43,11 @@ const accessoriesProductsLinks = [
 	},
 ];
 
-export default function Home({titleAndTwoImagesContent, imageBanner}) {
-	// console.log(imageBanner);
+export default function Home({pageTitle, homePageContent}) {
 	return (
 		<>
 			<Head>
-				<title>realme | United Kingdom</title>
+				<title>{pageTitle} | United Kingdom</title>
 				<link rel="icon" href="/images/Realme-Logo.jpg" />
 			</Head>
 
@@ -82,23 +80,88 @@ export default function Home({titleAndTwoImagesContent, imageBanner}) {
 				<FourProductDisplayGrid data={otherProducts} />
 
 				{/* Activities */}
-				<TwoImageDisplay data={titleAndTwoImagesContent} />
+				<TwoImageDisplay
+					title={homePageContent?.titleAndTwoImages?.title}
+					imageOne={homePageContent?.titleAndTwoImages?.imageOne}
+					imageOneLink={homePageContent?.titleAndTwoImages?.imageOneLink}
+					imageTwo={homePageContent?.titleAndTwoImages?.imageTwo}
+					imageTwoLink={homePageContent?.titleAndTwoImages?.imageTwoLink}
+				/>
 			</main>
 
 			{/* Image Banner */}
-			<ImageBanner data={imageBanner} />
+			<ImageBanner
+				title={homePageContent?.imageBanner?.title}
+				buttonLink={homePageContent?.imageBanner?.buttonLink}
+				backgroundImage={
+					homePageContent?.imageBanner?.backgroundImage?.sourceUrl
+				}
+			/>
 		</>
 	);
 }
 
 export async function getStaticProps() {
-	const titleAndTwoImagesContent = await getTitleAndTwoImages();
-	const imageBanner = await getImageBanner();
+	const getHomePageContent = gql`
+		{
+			mainContent: pages(where: {id: 16}) {
+				edges {
+					node {
+						title
+						homePage {
+							imageBanner {
+								title
+								buttonLink {
+									url
+									title
+									target
+								}
+								backgroundImage {
+									sourceUrl
+								}
+							}
+							titleAndTwoImages {
+								title
+								imageOne {
+									sourceUrl(size: LARGE)
+									altText
+									mediaDetails {
+										height
+										width
+									}
+								}
+								imageOneLink {
+									url
+									target
+								}
+								imageTwo {
+									sourceUrl(size: LARGE)
+									altText
+									mediaDetails {
+										height
+										width
+									}
+								}
+								imageTwoLink {
+									url
+									target
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	`;
 
+	const response = await client.query({
+		query: getHomePageContent,
+	});
 	return {
 		props: {
-			titleAndTwoImagesContent: titleAndTwoImagesContent,
-			imageBanner: imageBanner,
+			pageTitle: response?.data?.mainContent?.edges[0]?.node?.title,
+			homePageContent: response?.data?.mainContent?.edges[0]?.node?.homePage,
 		},
+		revalidate: 1,
 	};
 }

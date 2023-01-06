@@ -18,8 +18,8 @@ const LimitTimeProductDisplayGrid = (props) => {
 								link={keys.link}
 								image={keys.image}
 								title={keys.title}
-								subtitle={keys.subtitle}
 								price={keys.price}
+								subtitle={keys.subtitle}
 								discountPrice={keys.discountPrice}
 							/>
 						))}

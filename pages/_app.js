@@ -1,20 +1,16 @@
-import "../styles/globals.scss";
+import {client} from "../lib/apollo";
+import {ApolloProvider} from "@apollo/client/react";
+
+// Components
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import React, {useEffect} from "react";
+
+// Styling
+import "../styles/globals.scss";
 
 function MyApp({Component, pageProps}) {
-	// Removes Global Navbar & Adds Custom Header and Footer Page layout Function
-	if (Component.getLayout) {
-		return Component.getLayout(<Component {...pageProps} />);
-	}
-
-	useEffect(() => {
-		document.body.style.backgroundColor = "#fafafa";
-	}, []);
-
 	return (
-		<>
+		<ApolloProvider client={client}>
 			{/* <!--===== NAVIGATION =====--> */}
 			<Navbar />
 
@@ -22,7 +18,7 @@ function MyApp({Component, pageProps}) {
 
 			{/* <!--===== FOOTER =====--> */}
 			<Footer />
-		</>
+		</ApolloProvider>
 	);
 }
 

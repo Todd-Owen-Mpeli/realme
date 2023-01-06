@@ -29,7 +29,6 @@ module.exports = {
 			limeGreen: "#a2e603",
 			lightGrey: "#d5d5d5",
 			darkOrange: "#ff9900",
-			current: "currentColor",
 			orange: "rgb(255, 183, 0)",
 			transparent: "transparent",
 			yellow: "rgb(255, 201, 21)",
